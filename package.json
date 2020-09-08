@@ -1,12 +1,12 @@
 {
   "name": "note-taker",
   "version": "1.0.0",
-  "description": "",
+  "description": "App to write, save, view and delete notes on a browser using Express.js.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Carlos Martinez",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
