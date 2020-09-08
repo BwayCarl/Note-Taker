@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(__dirname));
 
-fs.readFile ("db/db.json", "utf8", (err, data) => {
+fs.readFile ("Develop/db/db.json", "utf8", (err, data) => {
     if (err) throw err;
     
     let notes = (JSON.parse.data);
@@ -46,11 +46,11 @@ app.post("/api/notes", function(req, res) {
 // Routes _______________________________________
 
 app.get("/notes", function(req, res) {
-    res.sendFile(path.join(__dirname, "./public/notes.html"));
+    res.sendFile(path.join(__dirname, "Develop/public/notes.html"));
   });
 
 app.get("*", function(req, res) {
-    res.sendFile(path.join(__dirname, "./public/index.html"));
+    res.sendFile(path.join(__dirname, "Develop/public/index.html"));
   });
   
 
