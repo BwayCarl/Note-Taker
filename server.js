@@ -3,7 +3,7 @@ const express = require("express");
 const path = require("path");
 const fs = require("fs")
 
-// Sets up the Express App _____________________
+// Sets up Express App and Heroku Port control || else default port number.
 const app = express();
 const PORT = process.env.PORT || 3000;
 
