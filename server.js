@@ -17,6 +17,17 @@ fs.readFile ("Develop/db/db.json", "utf8", (err, data) => {
     
     let notes = (JSON.parse.data);
 
+    
+// Routes _______________________________________
+
+app.get("/notes", function(req, res) {
+    res.sendFile(path.join(__dirname, "Develop/public/notes.html"));
+  });
+
+app.get("*", function(req, res) {
+    res.sendFile(path.join(__dirname, "Develop/public/index.html"));
+  });
+  
 
 //API Routes ___________________________________
 
@@ -41,18 +52,6 @@ app.post("/api/notes", function(req, res) {
 //* DELETE `/api/notes/:id` - Should receive a query parameter 
 //containing the id of a note to delete.
 
-
-    
-// Routes _______________________________________
-
-app.get("/notes", function(req, res) {
-    res.sendFile(path.join(__dirname, "Develop/public/notes.html"));
-  });
-
-app.get("*", function(req, res) {
-    res.sendFile(path.join(__dirname, "Develop/public/index.html"));
-  });
-  
 
 // Starts the server to begin listening ________
 app.listen(PORT, function() {
