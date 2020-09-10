@@ -1,6 +1,7 @@
 // Dependencies _______________________________
 const express = require("express");
 const path = require("path");
+const uniqid = require('uniqid');
 const fs = require("fs")
 
 // Sets up Express App and Heroku Port control || else default port number.
@@ -11,6 +12,8 @@ const PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(__dirname));
+
+
 
 // Listener starts the server ________
 app.listen(PORT, function() {
@@ -41,9 +44,12 @@ fs.readFile("Develop/db/db.json", "utf8", (err, data) => {
     app.post("/api/notes", function(req, res) {
         
         let newNote = req.body;
+        newNote.id = uniqid()
         notes.push(newNote);
         updateDb();
+        res.send('this worked!')
         return console.log("Added new note: " +newNote.title);
+    
     });
 
     // Recalls a note via ID
@@ -73,9 +79,9 @@ fs.readFile("Develop/db/db.json", "utf8", (err, data) => {
     // db.json file is updated when notes are added or deleted.
     function updateDb() {
         fs.writeFile("Develop/db/db.json",JSON.stringify(notes),err => {
-            if (err) throw err;
+           if (err) throw err;
             return true;
+            
         });
     }
 });
-
