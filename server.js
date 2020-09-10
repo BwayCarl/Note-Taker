@@ -17,13 +17,15 @@ app.listen(PORT, function() {
     console.log(`App listening on PORT ${PORT}`);
     });
 
+   
 
-// Setup notes variable
+// Setup notes
 fs.readFile("Develop/db/db.json", "utf8", (err, data) => {
     if (err) throw err;
 
     const notes = JSON.parse(data);
 
+    
     // ROUTES __________________________________
     
     // API Routes
@@ -56,7 +58,7 @@ fs.readFile("Develop/db/db.json", "utf8", (err, data) => {
         console.log("Deleted note with ID of "+req.params.id);
     });
 
-    // HTML Routes ___________________________
+    // HTML Routes 
 
     // GET `/notes` - Should return the `notes.html` file.
     app.get('/notes', function(req,res) {
