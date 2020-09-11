@@ -61,6 +61,7 @@ fs.readFile("Develop/db/db.json", "utf8", (err, data) => {
     app.delete("/api/notes/:id", function(req, res) {
         notes.splice(req.params.id, 1);
         updateDb();
+        res.send('this worked!')
         console.log("Deleted note with ID of "+req.params.id);
     });
 
