@@ -26,7 +26,7 @@ app.listen(PORT, function() {
 fs.readFile("Develop/db/db.json", "utf8", (err, data) => {
     if (err) throw err;
 
-    const notes = JSON.parse(data);
+    let notes = JSON.parse(data);
 
     
     // ROUTES __________________________________
@@ -58,7 +58,11 @@ fs.readFile("Develop/db/db.json", "utf8", (err, data) => {
 
     // Deletes a note via ID
     app.delete("/api/notes/:id", function(req, res) {
-        notes.splice(req.params.id, 1);
+       notes = notes.filter(
+           note => {
+               return note.id != req.params.id
+           }
+       )
         updateDb();
         res.send('this worked!')
         console.log("Deleted note with ID of "+req.params.id);
