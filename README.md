@@ -2,6 +2,10 @@
 An application that can be used to write, save, and delete notes using an express backend, saving and retrieving note data from a JSON file.
 
 [![Personal IDBadge](https://img.shields.io/badge/Dev-BwayCarl-red)](https://bwaycarl.github.io/Portfolio/)
+[![GitHub license](https://img.shields.io/github/license/BwayCarl/Node-README-Generator?logo=MIT)](https://github.com/BwayCarl/Note-Taker/blob/master/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/BwayCarl/Node-README-Generator)](https://github.com/BwayCarl/Note-Taker/issues)
+[![GitHub forks](https://img.shields.io/github/forks/BwayCarl/Node-README-Generator)](https://github.com/BwayCarl/Note-Taker/network)
+[![GitHub stars](https://img.shields.io/github/stars/BwayCarl/Node-README-Generator)](https://github.com/BwayCarl/Note-Taker/stargazers)
 
 ## Homework Assignment - Week 11
 #### Rutgers Coding Bootcamp / RUT-JER-FSF-PT-06-2020-U-C
@@ -67,7 +71,7 @@ You can also use this app directly from the [deployed Heroku site](https://after
  - Email: **[bwaycarl@gmail.com](mailto:bwaycarl@gmail.com)**
 
 ## *License* 
-This project is [MIT](https://github.com/BwayCarl/Template-Engine/blob/master/LICENSE) Licensed.
+This project is [MIT](https://github.com/BwayCarl/Note-Taker/blob/master/LICENSE) Licensed.
  
  &copy; 2020, Carlos Martinez
 
