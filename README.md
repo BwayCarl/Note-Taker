@@ -19,7 +19,7 @@ An application that can be used to write, save, and delete notes using an expres
  - [License](#license)
 
 ## *Description* 
-This application builds a Node Command Line Interface using an express backend that can be used to create and store notes to a db.json file. Each note has a unique ID generated when the note is saved in order for easy deletion of a specific note.
+This application builds a Node Command Line Interface using an express backend that can be used to create and store notes to a JSON file. Once saved, the title of the note is generated on a list. Clicking on the title will recall the note in a readonly format. Each note has a unique ID generated when the note is saved in order for easy deletion of a specific note.
 
 ## *Installation* 
 Clone the Github repo.
@@ -32,10 +32,10 @@ Once in the properly cloned folder, run ```npm install``` to install the followi
 
 ## *Usage*
 
- #### LOCAL USAGE: 
+ #### **LOCAL USAGE:** 
  Enter ```nodemon server.js``` in your command line and press ```ENTER```. 
  After receiving the notification ```App listening on PORT 3000```, open your browser and use ```http://localhost:3000``` to access the Note Taker App. 
-#### USE IN BROWSER:
+#### **USE IN BROWSER:**
 You can also use this app directly from the [deployed Heroku site](https://afternoon-dawn-02847.herokuapp.com/).
 
 ## *Contributing* 
@@ -44,7 +44,7 @@ You can also use this app directly from the [deployed Heroku site](https://after
 ## *Authors* 
  Carlos Martinez
 
- Frontend, emplates, libraries and tests provided by Rutgers as a starting point for the assignment.
+ Frontend, templates and ```index.js``` file provided by Rutgers as a starting point for the assignment.
 
 ## *Screenshots* 
 ![Gif demo](Develop/images/note-taker-demo.gif)
