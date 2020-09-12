@@ -49,7 +49,6 @@ fs.readFile("Develop/db/db.json", "utf8", (err, data) => {
         updateDb();
         res.send('this worked!')
         return console.log("Added new note: " +newNote.title);
-    
     });
 
     // Recalls a note via ID
