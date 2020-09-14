@@ -23,7 +23,7 @@ An application that can be used to write, save, and delete notes using an expres
  - [License](#license)
 
 ## *Description* 
-This application builds a Node Command Line Interface using an express backend that can be used to create and store notes to a JSON file. Once saved, the title of the note is generated on a list. Clicking on the title will recall the note in a readonly format. Each note has a unique ID generated when the note is saved in order for easy deletion of a specific note.
+This application uses an express backend for the creation  and storage notes to a JSON file. Once saved, the title of the note is generated on a list. Clicking on the title will recall the note in a readonly format. Each note has a unique ID generated when the note is saved in order for easy deletion of a specific note.
 
 ## *Installation* 
 Clone the Github repo.
